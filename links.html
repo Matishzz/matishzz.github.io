@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<head>
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/455/455590.png">
+  <script>
+    let t="Matishzz Links",i=0,d=1;
+    setInterval(()=>{document.title=t.slice(0,i); i+=d; if(i===t.length||i===0)d*=-1},250);
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, rgb(107,103,102), #000);
+      background-attachment: fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      height: 100%;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .avatar {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 3px solid #444;
+      margin: 20px auto;
+      object-fit: cover;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+
+    h1 {
+      margin: 10px 0;
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    .link-card {
+      display: flex;
+      align-items: center;
+      background: rgba(20, 20, 20, 0.85);
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 12px;
+      margin: 12px 0;
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .link-card .right-text {
+      margin-left: auto;
+      font-size: 0.75rem;
+       color: #aaa;
+}
+
+    .link-card:hover {
+      background: rgba(40, 40, 40, 0.9);
+      transform: scale(1.02);
+    }
+
+    .link-card img {
+      width: 32px;
+      height: 32px;
+      border-radius: 5px;
+      margin-right: 15px;
+    }
+
+    .section-title {
+      text-align: left;
+      margin: 25px 0 12px;
+      font-weight: bold;
+      color: #aaa;
+      font-size: 0.85rem;
+    }
+
+    .link-fire {
+      border: 1px solid #ff6600;
+      box-shadow: 0 0 12px rgba(255, 120, 0, 0.6), 0 0 20px rgba(255, 80, 0, 0.4);
+      background: linear-gradient(145deg, rgba(30,30,30,0.95), rgba(50,20,10,0.9));
+      animation: flicker 2s infinite ease-in-out;
+    }
+
+    .link-fire:hover {
+      background: linear-gradient(145deg, rgba(50,30,20,0.95), rgba(80,30,10,0.9));
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(255, 150, 0, 0.8), 0 0 30px rgba(255, 100, 0, 0.5);
+    }
+
+    @keyframes flicker {
+      0%   { box-shadow: 0 0 12px rgba(255,120,0,0.6); }
+      50%  { box-shadow: 0 0 18px rgba(255,140,0,0.8); }
+      100% { box-shadow: 0 0 12px rgba(255,120,0,0.6); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://i.pinimg.com/736x/5f/4e/5f/5f4e5f6d598753b645347a77f937a9e2.jpg" alt="Avatar" class="avatar">
+
+    <h1>Matishzz</h1>
+    <p>These are my only legitimate social media accounts, everything else is fake.</p>
+
+    <a class="link-card link-fire" href="https://x.com/Matishzz">
+      <img src="https://pbs.twimg.com/profile_images/1962422437049487360/eJRVVZVW_400x400.jpg" alt="X">
+      𝕏 | Overclock and tweaking services
+    </a>
+
+    <a class="link-card link-fire" href="https://platinogear.com/">
+      <img src="https://acdn-us.mitiendanube.com/stores/005/589/021/themes/common/logo-1958729002-1744518874-00801e4ff592fa2b7737d7bad8f28b491744518874-480-0.webp" alt="Platinogear">
+      Platinogear | Code Matishzz 5% OFF
+    </a>
+
+    <a class="link-card" href="https://github.com/Matishzz">
+      <img src="https://avatars.githubusercontent.com/u/91393865?v=4" alt="GitHub">
+      Github
+    </a>
+
+    <a class="link-card" href="https://discord.gg/ZQKFga6mcb">
+      <img src="https://cdn.discordapp.com/icons/797169072978526219/e4f0a139eede83688b8b37eb6cab28ac.png?size=80&quality=lossless" alt="Discord">
+      Discord Server Tweaking
+      <span class="right-text">Outdated</span>
+    </a>
+
+    <div class="section-title">Repositories</div>
+
+    <a class="link-card" href="https://github.com/Matishzz/OBS-Studio">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/OBS_Studio_Logo.svg/1200px-OBS_Studio_Logo.svg.png" alt="OBS">
+      OBS Studio v1.5
+      <span class="right-text">Last update: 3/29/25</span>
+    </a>
+
+    <a class="link-card" href="https://github.com/Matishzz/DCH-ControlPanel">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfgjTFTgJAZJjhLmi0d9T_stQxsLM4nEL9QQ&s" alt="Nvidia">
+      DCH Control Panel
+      <span class="right-text">Last update: 7/22/25</span>
+    </a>
+
+    <a class="link-card" href="https://github.com/Matishzz/AMD-Install-Drivers">
+      <img src="https://i.pinimg.com/474x/6a/c2/43/6ac243726876dba904075dbff73406c7.jpg" alt="AMD">
+      AMD Install Drivers
+      <span class="right-text">Last update: 5/11/25</span>
+    </a>
+  </div>
+</body>
+</html>
