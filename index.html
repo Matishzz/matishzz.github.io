@@ -5,16 +5,14 @@
     let t="Matishzz Links",i=0,d=1;
     setInterval(()=>{document.title=t.slice(0,i); i+=d; if(i===t.length||i===0)d*=-1},250);
   </script>
-  
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  
+
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, rgb(107,103,102), #000);
-      background-attachment: fixed;
-      background-size: cover;
+      background: #000; /* NEGRO PURO */
       color: white;
       text-align: center;
       min-height: 100vh;
@@ -32,16 +30,18 @@
       width: 180px;
       height: 180px;
       border-radius: 50%;
-      border: 3px solid #444;
+      border: 3px solid #777;
       margin: 20px auto;
       object-fit: cover;
-      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      display: block;
     }
 
     h1 {
       margin: 10px 0;
       font-size: 1.7rem;
       font-weight: 600;
+      color: #fff;
     }
 
     p {
@@ -51,9 +51,10 @@
     }
 
     .link-card {
+      position: relative;
       display: flex;
       align-items: center;
-      background: rgba(20, 20, 20, 0.85);
+      background: rgba(20, 20, 20, 0.9);
       border: 1px solid #333;
       border-radius: 10px;
       padding: 12px;
@@ -61,17 +62,18 @@
       text-decoration: none;
       color: white;
       font-weight: 500;
-      transition: background 0.2s, transform 0.2s;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      overflow: hidden;
     }
 
     .link-card .right-text {
       margin-left: auto;
       font-size: 0.75rem;
-       color: #aaa;
-}
+      color: #aaa;
+    }
 
     .link-card:hover {
-      background: rgba(40, 40, 40, 0.9);
+      background: rgba(40, 40, 40, 0.95);
       transform: scale(1.02);
     }
 
@@ -90,35 +92,50 @@
       font-size: 0.85rem;
     }
 
+    /* EFECTO BLANCO (antes fuego) */
     .link-fire {
-      border: 1px solid #ff6600;
-      box-shadow: 0 0 12px rgba(255, 120, 0, 0.6), 0 0 20px rgba(255, 80, 0, 0.4);
-      background: linear-gradient(145deg, rgba(30,30,30,0.95), rgba(50,20,10,0.9));
-      animation: flicker 2s infinite ease-in-out;
+      border: 1px solid #fff;
+      box-shadow: 0 0 10px rgba(255,255,255,0.4), 0 0 20px rgba(255,255,255,0.2);
+      background: rgba(25,25,25,0.95);
+      animation: flickerWhite 2s infinite ease-in-out;
     }
 
     .link-fire:hover {
-      background: linear-gradient(145deg, rgba(50,30,20,0.95), rgba(80,30,10,0.9));
+      background: rgba(50,50,50,0.95);
       transform: scale(1.05);
-      box-shadow: 0 0 18px rgba(255, 150, 0, 0.8), 0 0 30px rgba(255, 100, 0, 0.5);
+      box-shadow: 0 0 18px rgba(255,255,255,0.7), 0 0 30px rgba(255,255,255,0.3);
     }
 
-    @keyframes flicker {
-      0%   { box-shadow: 0 0 12px rgba(255,120,0,0.6); }
-      50%  { box-shadow: 0 0 18px rgba(255,140,0,0.8); }
-      100% { box-shadow: 0 0 12px rgba(255,120,0,0.6); }
+    @keyframes flickerWhite {
+      0%   { box-shadow: 0 0 10px rgba(255,255,255,0.4); }
+      50%  { box-shadow: 0 0 18px rgba(255,255,255,0.7); }
+      100% { box-shadow: 0 0 10px rgba(255,255,255,0.4); }
+    }
+
+    .badge-off {
+      position: absolute;
+      top: 8px;
+      right: 10px;
+      background: #fff;
+      color: #000;
+      font-size: 0.68rem;
+      font-weight: 600;
+      padding: 4px 8px;
+      border-radius: 999px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.4);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <img src="https://i.pinimg.com/736x/5f/4e/5f/5f4e5f6d598753b645347a77f937a9e2.jpg" alt="Avatar" class="avatar">
+    <img src="https://i.pinimg.com/736x/01/51/79/015179f9a50bc2d427cccce0a3971a72.jpg" alt="Avatar" class="avatar">
 
     <h1>Matishzz</h1>
     <p>These are my only legitimate social media accounts, everything else is fake.</p>
 
     <a class="link-card link-fire" href="https://x.com/Matishzz">
-      <img src="https://i.pinimg.com/736x/05/84/14/05841449df1c95d3352b410446756807.jpg" alt="X">
+      <span class="badge-off">15% OFF</span>
+      <img src="https://pbs.twimg.com/profile_images/2036952246815252481/Q29bEzyU_400x400.jpg" alt="X">
       𝕏 | Overclock and tweaking services
     </a>
 
@@ -134,7 +151,7 @@
 
     <a class="link-card" href="https://discord.gg/ZQKFga6mcb">
       <img src="https://cdn.discordapp.com/icons/797169072978526219/e4f0a139eede83688b8b37eb6cab28ac.png?size=80&quality=lossless" alt="Discord">
-      Discord Server Tweaking
+      Matishzz Tweaking
       <span class="right-text">Outdated</span>
     </a>
 
@@ -160,4 +177,3 @@
   </div>
 </body>
 </html>
-
